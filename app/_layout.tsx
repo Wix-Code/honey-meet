@@ -32,13 +32,20 @@ export default function RootLayout() {
 
   return (
     <Stack screenOptions={{ headerShown: false }}>
+      {/* Root index */}
       <Stack.Screen name="index" />
-      <Stack.Screen name="login" />
-      <Stack.Screen name="sign-up" />
-      <Stack.Screen name="forgot-password" />
-      <Stack.Screen name="verify-code" />
-      <Stack.Screen name="reset-password" />
-      <Stack.Screen options={{headerShown: false}} name="(tabs)" />
+      
+      {/* Auth screens */}
+      <Stack.Screen name="(auth)" />
+      
+      {/* Onboarding screens */}
+      <Stack.Screen name="(onboarding)" />
+      
+      {/* Setup/Profile creation screens */}
+      <Stack.Screen name="(setup)" />
+      
+      {/* Main app tabs */}
+      <Stack.Screen name="(tabs)" />
     </Stack>
   );
 }

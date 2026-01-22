@@ -11,7 +11,8 @@ export default function Index() {
       }}
     >
       <Text>Edit app/index.tsx to edit this screen.</Text>
-      <Link href={"/(auth)/forgot-password"}>Sign in</Link>
+      {/* ✅ CORRECT - Link to the setup flow, not individual page */}
+      <Link href={"/(setup)"}>Start Setup</Link>
     </View>
   );
 }

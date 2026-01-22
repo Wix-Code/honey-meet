@@ -1,76 +1,104 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
-import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
-import Fontisto from "@expo/vector-icons/Fontisto";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import { Tabs } from "expo-router";
+import { Platform, StyleSheet, TouchableOpacity, View } from "react-native";
 
 export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
         headerShown: false,
-        tabBarActiveTintColor: "#1A1A1A",
-        tabBarInactiveTintColor: "#808080",
-        tabBarLabelStyle: {
-          fontSize: 12,
-          fontFamily: "OpenSans_600SemiBold",
-          marginBottom: 4,
-        },
+        tabBarActiveTintColor: "#4B164C",
+        tabBarInactiveTintColor: "#9CA4AB",
+        tabBarShowLabel: false,
         tabBarStyle: {
+          position: "absolute",
+          //bottom: 20,
+          left: 20,
+          right: 20,
           backgroundColor: "#ffffff",
-          borderTopWidth: 1,
-          borderTopColor: "#fafafa",
-          // paddingTop: 8,
-          // paddingBottom: Platform.OS === 'ios' ? 20 : 12,
-          // height: Platform.OS === 'ios' ? 88 : 72,
+          borderRadius: 30,
+          //height: 70,
+          paddingTop: 10,
+          elevation: 10,
+          shadowColor: "#000",
+          justifyContent: "space-between",
+          alignItems: "center",
+          shadowOffset: {
+            width: 0,
+            height: 5,
+          },
+          shadowOpacity: 0.15,
+          shadowRadius: 10,
+          borderTopWidth: 0,
+          paddingBottom: 0,
         },
       }}
     >
+      {/* Home Tab */}
       <Tabs.Screen
-        name="(home)"
+        name="index"
         options={{
           title: "Home",
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="home" size={22} color={color} />
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="home-outline" size={26} color={color} />
           ),
         }}
       />
+
+      {/* Discover Tab */}
       <Tabs.Screen
-        name="search"
+        name="discover"
         options={{
-          title: "Search",
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome name="search" size={22} color={color} />
+          title: "Discover",
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="search-outline" size={26} color={color} />
           ),
         }}
       />
+
+      {/* Center Plus Button */}
       <Tabs.Screen
-        name="saved"
+        name="create"
         options={{
-          title: "Saved",
-          tabBarIcon: ({ color, size }) => (
-            <Fontisto name="heart" size={19} color={color} />
+          title: "Create",
+          tabBarIcon: ({ focused }) => (
+            <View style={styles.centerButton}>
+              <Ionicons name="add" size={32} color="#ffffff" />
+            </View>
+          ),
+        }}
+        listeners={{
+          tabPress: (e) => {
+            // Prevent default navigation
+            // e.preventDefault();
+            // Add your custom action here
+            // For example: open modal, navigate to create screen, etc.
+          },
+        }}
+      />
+
+      {/* Messages Tab */}
+      <Tabs.Screen
+        name="message"
+        options={{
+          title: "Messages",
+          tabBarIcon: ({ color }) => (
+            <Ionicons name="chatbubble-ellipses-outline" size={26} color={color} />
           ),
         }}
       />
+
+      {/* Profile Tab */}
       <Tabs.Screen
-        name="cart"
+        name="account"
         options={{
-          title: "Cart",
-          tabBarIcon: ({ color, size }) => (
-            <FontAwesome6 name="cart-shopping" size={21} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="(account)"
-        options={{
-          title: "Account",
-          tabBarIcon: ({ color, size }) => (
+          title: "Profile",
+          tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons
-              name="account-circle"
-              size={24}
+              name="account-outline"
+              size={28}
               color={color}
             />
           ),
@@ -79,3 +107,23 @@ export default function TabLayout() {
     </Tabs>
   );
 }
+
+const styles = StyleSheet.create({
+  centerButton: {
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    backgroundColor: "#4B164C",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: -25, // Lifts the button above the tab bar
+    shadowColor: "#4B164C",
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
+    elevation: 8,
+  },
+});

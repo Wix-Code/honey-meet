@@ -9,6 +9,7 @@ import { useFonts } from "expo-font";
 import { Stack } from "expo-router";
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -31,21 +32,23 @@ export default function RootLayout() {
   }
 
   return (
-    <Stack screenOptions={{ headerShown: false }}>
-      {/* Root index */}
-      <Stack.Screen name="index" />
-      
-      {/* Auth screens */}
-      <Stack.Screen name="(auth)" />
-      
-      {/* Onboarding screens */}
-      <Stack.Screen name="(onboarding)" />
-      
-      {/* Setup/Profile creation screens */}
-      <Stack.Screen name="(setup)" />
-      
-      {/* Main app tabs */}
-      <Stack.Screen name="(tabs)" />
-    </Stack>
+    <GestureHandlerRootView>
+      <Stack screenOptions={{ headerShown: false }}>
+        {/* Root index */}
+        <Stack.Screen name="index" />
+        
+        {/* Auth screens */}
+        <Stack.Screen name="(auth)" />
+        
+        {/* Onboarding screens */}
+        <Stack.Screen name="(onboarding)" />
+        
+        {/* Setup/Profile creation screens */}
+        <Stack.Screen name="(setup)" />
+        
+        {/* Main app tabs */}
+        <Stack.Screen name="(tabs)" />
+      </Stack>
+    </GestureHandlerRootView>
   );
 }

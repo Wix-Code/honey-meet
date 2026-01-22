@@ -13,6 +13,7 @@ export default function Index() {
       <Text>Edit app/index.tsx to edit this screen.</Text>
       {/* ✅ CORRECT - Link to the setup flow, not individual page */}
       <Link href={"/(setup)"}>Start Setup</Link>
+      <Link href={"/(tabs)"}>Home</Link>
     </View>
   );
 }

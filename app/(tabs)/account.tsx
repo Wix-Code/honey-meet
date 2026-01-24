@@ -72,7 +72,7 @@ const accounts = [
         name: "Language",
         icon: "language",
         iconType: "MaterialIcons",
-        route: "/language",
+        route: "/(pages)/languages",
       },
       {
         id: 2,
@@ -105,7 +105,7 @@ const accounts = [
         name: "Help & Support",
         icon: "help-circle",
         iconType: "Feather",
-        route: "/support",
+        route: "/(pages)/help-support",
       },
       {
         id: 3,

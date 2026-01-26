@@ -1,12 +1,10 @@
-import { Link } from "expo-router";
 import React from "react";
 import { Text, View } from "react-native";
 
-export default function post() {
+export default function DatingList() {
   return (
     <View>
       <Text>Dating</Text>
-      <Link href={"/(pages)/dating-list"}>Link</Link>
     </View>
   );
 }

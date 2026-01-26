@@ -1,8 +1,7 @@
-import FontAwesome from "@expo/vector-icons/FontAwesome";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import { Tabs } from "expo-router";
-import { Platform, StyleSheet, TouchableOpacity, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 
 export default function TabLayout() {
   return (
@@ -85,7 +84,11 @@ export default function TabLayout() {
         options={{
           title: "Messages",
           tabBarIcon: ({ color }) => (
-            <Ionicons name="chatbubble-ellipses-outline" size={26} color={color} />
+            <Ionicons
+              name="chatbubble-ellipses-outline"
+              size={26}
+              color={color}
+            />
           ),
         }}
       />
@@ -93,6 +96,20 @@ export default function TabLayout() {
       {/* Profile Tab */}
       <Tabs.Screen
         name="account"
+        options={{
+          title: "Profile",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons
+              name="account-outline"
+              size={28}
+              color={color}
+            />
+          ),
+        }}
+      />
+
+      <Tabs.Screen
+        name="post"
         options={{
           title: "Profile",
           tabBarIcon: ({ color }) => (

@@ -27,7 +27,7 @@ const accounts = [
         name: "Profile",
         icon: "account-circle-outline",
         iconType: "MaterialCommunityIcons",
-        route: "/profile",
+        route: "/(pages)/edit-profile",
       },
       {
         id: 2,

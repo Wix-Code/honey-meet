@@ -17,11 +17,12 @@ export default function TabLayout() {
           left: 20,
           right: 20,
           backgroundColor: "#ffffff",
-          borderRadius: 30,
-          //height: 70,
-          paddingTop: 10,
+          // borderRadius: 30,
+          height: 100,
+          paddingTop: 20,
           elevation: 10,
           shadowColor: "#000",
+          //marginBottom: 10,
           justifyContent: "space-between",
           alignItems: "center",
           shadowOffset: {
@@ -32,6 +33,7 @@ export default function TabLayout() {
           shadowRadius: 10,
           borderTopWidth: 0,
           paddingBottom: 0,
+          //paddingVertical: 30,
         },
       }}
     >
@@ -68,14 +70,14 @@ export default function TabLayout() {
             </View>
           ),
         }}
-        listeners={{
-          tabPress: (e) => {
-            // Prevent default navigation
-            // e.preventDefault();
-            // Add your custom action here
-            // For example: open modal, navigate to create screen, etc.
-          },
-        }}
+        // listeners={{
+        //   tabPress: (e) => {
+        //     // Prevent default navigation
+        //     // e.preventDefault();
+        //     // Add your custom action here
+        //     // For example: open modal, navigate to create screen, etc.
+        //   },
+        // }}
       />
 
       {/* Messages Tab */}
@@ -127,13 +129,13 @@ export default function TabLayout() {
 
 const styles = StyleSheet.create({
   centerButton: {
-    width: 60,
-    height: 60,
-    borderRadius: 30,
+    width: 50,
+    height: 50,
+    borderRadius: 25,
     backgroundColor: "#4B164C",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: -25, // Lifts the button above the tab bar
+    //marginTop: -25, // Lifts the button above the tab bar
     shadowColor: "#4B164C",
     shadowOffset: {
       width: 0,

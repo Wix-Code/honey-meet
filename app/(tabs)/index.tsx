@@ -280,7 +280,7 @@ export default function Home() {
                 style={styles.actionButtonRewind}
                 onPress={handleRewind}
               >
-                <Ionicons name="reload" size={24} color="#ffffff" />
+                <Ionicons name="reload" size={28} color="#ffffff" />
               </TouchableOpacity>
 
               <TouchableOpacity
@@ -294,7 +294,7 @@ export default function Home() {
                 style={styles.actionButtonSuperLike}
                 onPress={handleSuperLike}
               >
-                <FontAwesome name="star" size={24} color="#E53935" />
+                <FontAwesome name="star" size={28} color="#E53935" />
               </TouchableOpacity>
 
               <TouchableOpacity

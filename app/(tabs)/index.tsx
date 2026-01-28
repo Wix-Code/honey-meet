@@ -280,33 +280,33 @@ export default function Home() {
                 style={styles.actionButtonRewind}
                 onPress={handleRewind}
               >
-                <Ionicons name="reload" size={24} color="#FFD700" />
+                <Ionicons name="reload" size={24} color="#ffffff" />
               </TouchableOpacity>
 
               <TouchableOpacity
                 style={styles.actionButtonPass}
                 onPress={handlePass}
               >
-                <MaterialIcons name="close" size={32} color="#FF3B30" />
+                <MaterialIcons name="close" size={32} color="#ffffff" />
               </TouchableOpacity>
 
               <TouchableOpacity
                 style={styles.actionButtonSuperLike}
                 onPress={handleSuperLike}
               >
-                <FontAwesome name="star" size={24} color="#00BFFF" />
+                <FontAwesome name="star" size={24} color="#E53935" />
               </TouchableOpacity>
 
               <TouchableOpacity
                 style={styles.actionButtonLike}
                 onPress={handleLike}
               >
-                <FontAwesome name="heart" size={28} color="#4B164C" />
+                <FontAwesome name="heart" size={28} color="#ffffff" />
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.actionButtonBoost}>
+              {/* <TouchableOpacity style={styles.actionButtonBoost}>
                 <Ionicons name="flash" size={24} color="#9C27B0" />
-              </TouchableOpacity>
+              </TouchableOpacity> */}
             </View>
           </View>
         ) : (
@@ -563,7 +563,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#ffffff",
     paddingHorizontal: 16,
     paddingVertical: 8,
-    borderRadius: 20,
+    borderRadius: 30,
     borderWidth: 1,
     borderColor: "#E3E7EC",
   },
@@ -574,16 +574,16 @@ const styles = StyleSheet.create({
   },
   actionButtons: {
     flexDirection: "row",
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
-    gap: 12,
+    //gap: 12,
     padding: 20,
   },
   actionButtonRewind: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    backgroundColor: "#ffffff",
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    backgroundColor: "#DD88CF",
     justifyContent: "center",
     alignItems: "center",
     shadowColor: "#000",
@@ -593,10 +593,10 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   actionButtonPass: {
-    width: 56,
-    height: 56,
-    borderRadius: 28,
-    backgroundColor: "#ffffff",
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    backgroundColor: "#111111",
     justifyContent: "center",
     alignItems: "center",
     shadowColor: "#000",
@@ -606,10 +606,10 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   actionButtonSuperLike: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    backgroundColor: "#ffffff",
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    backgroundColor: "#FFF0F0",
     justifyContent: "center",
     alignItems: "center",
     shadowColor: "#000",
@@ -619,10 +619,10 @@ const styles = StyleSheet.create({
     elevation: 3,
   },
   actionButtonLike: {
-    width: 64,
-    height: 64,
-    borderRadius: 32,
-    backgroundColor: "#4B164C",
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    backgroundColor: "#E53935",
     justifyContent: "center",
     alignItems: "center",
     shadowColor: "#000",
@@ -631,19 +631,19 @@ const styles = StyleSheet.create({
     shadowRadius: 8,
     elevation: 5,
   },
-  actionButtonBoost: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    backgroundColor: "#ffffff",
-    justifyContent: "center",
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.1,
-    shadowRadius: 4,
-    elevation: 3,
-  },
+  // actionButtonBoost: {
+  //   width: 60,
+  //   height: 60,
+  //   borderRadius: 30,
+  //   backgroundColor: "#ffffff",
+  //   justifyContent: "center",
+  //   alignItems: "center",
+  //   shadowColor: "#000",
+  //   shadowOffset: { width: 0, height: 2 },
+  //   shadowOpacity: 0.1,
+  //   shadowRadius: 4,
+  //   elevation: 3,
+  // },
   noMoreProfiles: {
     alignItems: "center",
     justifyContent: "center",

@@ -17,6 +17,8 @@ export default function post() {
       <Link href={"/(pages)/dating-list"}>Link</Link>
       <Link href={"/(pages)/send-invitation"}>Link</Link>
       <Link href={"/invitation/[id]"}>Link</Link>
+      <Link href={"/(pages)/all-notifications"}>Link</Link>
+      <Link href={"/(pages)/search"}>Link</Link>
     </View>
   );
 }
